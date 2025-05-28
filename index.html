@@ -499,6 +499,32 @@
             color: var(--text-secondary);
         }
 
+        /* Project Link Styles */
+        .project-link {
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
+            border-bottom: 1px dashed var(--primary-color);
+        }
+
+        .project-link:hover {
+            color: var(--primary-color);
+            border-bottom: 1px solid var(--primary-color);
+        }
+
+        .project-link::after {
+            content: "↗";
+            font-size: 0.8em;
+            margin-left: 3px;
+            display: inline-block;
+            transition: transform 0.2s ease;
+        }
+
+        .project-link:hover::after {
+            transform: translate(2px, -2px);
+        }
+
         /* Social Links Card */
         .social-card {
             background: var(--card-gradient);
@@ -905,7 +931,7 @@
                             seamless user
                             experiences.</p>
                     </div>
-                      <div class="timeline-item fade-in">
+                    <div class="timeline-item fade-in">
                         <h4>Mobile App Developer</h4>
                         <h6 class="text-primary mb-2">
                             <a href="https://sourceexpert.net/" target="_blank" rel="noopener noreferrer"
@@ -913,10 +939,11 @@
                                 Source Expert
                             </a> • Remote • 2025 - Present
                         </h6>
-                        <p>Contributed to various mobile app projects and helped to build intuitive user experience 
-                            designs. Worked closely with clients to understand their requirements and deliver high-quality
+                        <p>Contributed to various mobile app projects and helped to build intuitive user experience
+                            designs. Worked closely with clients to understand their requirements and deliver
+                            high-quality
                             applications.
-                         </p>
+                        </p>
                     </div>
                     <div class="timeline-item fade-in">
                         <h4>Junior Flutter Developer</h4>
@@ -1013,7 +1040,7 @@
         </div>
     </section>
 
-        <!-- Company Section -->
+    <!-- Company Section -->
     <section id="company" class="section company">
         <div class="container">
             <h2 class="section-title fade-in">My Software Company</h2>
@@ -1085,6 +1112,15 @@
                         <div class="mt-3">
                             <h6>Notable Projects:</h6>
                             <ul class="list-unstyled">
+                                <li class="mb-2">
+                                    <i class="bi bi-dot text-primary"></i>
+                                    <strong>
+                                        <a href="https://pub.dev/packages/string_extractor_intl" target="_blank"
+                                            rel="noopener noreferrer" class="project-link">
+                                            Flutter Localization Helper
+                                        </a>
+                                    </strong> - Package for easy app internationalization and localization
+                                </li>
                                 <li class="mb-2">
                                     <i class="bi bi-dot text-primary"></i>
                                     <strong>Flutter UI Components</strong> - Reusable widget library
