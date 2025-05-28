@@ -572,6 +572,99 @@
             font-weight: 500;
         }
 
+        /* Blog Section */
+        .blog {
+            background: var(--bg-tertiary);
+        }
+
+        .blog-card {
+            display: block;
+            background: var(--card-gradient);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            height: 100%;
+            text-decoration: none;
+            color: var(--text-primary);
+        }
+
+        .blog-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 212, 255, 0.2);
+            border-color: rgba(0, 212, 255, 0.3);
+        }
+
+        .blog-image {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .blog-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .blog-card:hover .blog-image img {
+            transform: scale(1.05);
+        }
+
+        .blog-content {
+            padding: 1.5rem;
+        }
+
+        .blog-category {
+            display: inline-block;
+            background: rgba(0, 212, 255, 0.1);
+            color: var(--primary-color);
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .blog-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+            transition: color 0.3s ease;
+        }
+
+        .blog-card:hover h3 {
+            color: var(--primary-color);
+        }
+
+        .blog-excerpt {
+            color: var(--text-secondary);
+            margin-bottom: 1.2rem;
+            font-size: 0.95rem;
+        }
+
+        .blog-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .blog-meta span {
+            display: flex;
+            align-items: center;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .blog-image {
+                height: 160px;
+            }
+
+            .blog-content {
+                padding: 1.2rem;
+            }
+        }
+
         /* Footer */
         .footer {
             background: var(--bg-primary);
@@ -891,7 +984,8 @@
                     <div class="timeline-item fade-in">
                         <h4>Flutter Developer</h4>
                         <h6 class="text-primary mb-2">
-                            <a href="https://promatrix.com.tr/" target="_blank" rel="noopener noreferrer" class="company-link">
+                            <a href="https://promatrix.com.tr/" target="_blank" rel="noopener noreferrer"
+                                class="company-link">
                                 ProMatrix
                             </a> • 2025 - Present
                         </h6>
@@ -1024,6 +1118,86 @@
                     </div>
                 </div>
 
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Articles Section -->
+    <section id="blog" class="section blog">
+        <div class="container">
+            <h2 class="section-title fade-in">Latest Articles</h2>
+            <div class="row">
+                <!-- Blog Card 1 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <a href="https://mumin-ahmod.medium.com/flutter-bloc-cubit-and-emit-basics-for-beginners-a-bottom-up-approach-a3a7c78fcd89"
+                        class="blog-card fade-in" target="_blank" rel="noopener noreferrer">
+                        <div class="blog-image">
+                            <img src="img/package-ss.png" alt="Article thumbnail" class="img-fluid">
+                        </div>
+                        <div class="blog-content">
+                            <span class="blog-category">Flutter Package</span>
+                            <h3>Flutter String Extractor Package: From Hardcoded Strings to i18n in Minutes — Automate
+                                Flutter Localization</h3>
+                            <p class="blog-excerpt">Have you ever found yourself deep into a Flutter project, only to
+                                realize you need to add internationalization support? Looking at hundreds of hardcoded
+                                strings scattered across dozens of files can be overwhelming. What if I told you there’s
+                                a way to automate this entire process?</p>
+                            <div class="blog-meta">
+                                <span class="blog-date"><i class="bi bi-calendar me-1"></i> May 28, 2025</span>
+                                <span class="blog-read-time"><i class="bi bi-clock me-1"></i> 8 min read</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Blog Card 2 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <a href="https://yourblog.com/article2" class="blog-card fade-in" target="_blank"
+                        rel="noopener noreferrer">
+                        <div class="blog-image">
+                            <img src="img/blog2-bloc.png" alt="Article thumbnail" class="img-fluid">
+                        </div>
+                        <div class="blog-content">
+                            <span class="blog-category">Flutter State mgmt</span>
+                            <h3>Flutter BLoC Cubit and emit basics: for beginners a Bottom Up Approach</h3>
+                            <p class="blog-excerpt">In the BLoC (Business Logic Component) pattern using the
+                                flutter_bloc package, a Cubit is a simpler version of a Bloc. The key idea is:
+                                A Cubit emits new states using the emit() method.</p>
+                            <div class="blog-meta">
+                                <span class="blog-date"><i class="bi bi-calendar me-1"></i> June 3, 2025</span>
+                                <span class="blog-read-time"><i class="bi bi-clock me-1"></i> 6 min read</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Blog Card 3 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <a href="https://mumin-ahmod.medium.com/git-conventions-the-developers-guide-to-writing-better-commits-and-workflows-840b5e3b830d"
+                        class="blog-card fade-in" target="_blank" rel="noopener noreferrer">
+                        <div class="blog-image">
+                            <img src="img/git-github-mumin.png" alt="Article thumbnail" class="img-fluid">
+                        </div>
+                        <div class="blog-content">
+                            <span class="blog-category">Performance</span>
+                            <h3>Git Conventions: The Developer’s Guide to Writing Better Commits and Workflows</h3>
+                            <p class="blog-excerpt">Good Git conventions transform your repository from a chaotic
+                                timeline into a clear, searchable story of your project’s evolution.</p>
+                            <div class="blog-meta">
+                                <span class="blog-date"><i class="bi bi-calendar me-1"></i> May 22, 2025</span>
+                                <span class="blog-read-time"><i class="bi bi-clock me-1"></i> 4 min read</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="text-center mt-4">
+                <a href="https://mumin-ahmod.medium.com/" class="btn btn-outline-primary" target="_blank"
+                    rel="noopener noreferrer">
+                    View All Articles <i class="bi bi-arrow-right ms-2"></i>
+                </a>
             </div>
         </div>
     </section>
