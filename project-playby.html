@@ -322,7 +322,8 @@
                             <li>Image caching using <code>cached_network_image</code> for smoother image loading</li>
                             <li>Lazy loading and pagination for property listings</li>
                             <li>Minimized widget rebuilds using <code>const</code> constructors and selective
-                                <code>Consumer</code> usage</li>
+                                <code>Consumer</code> usage
+                            </li>
                             <li>Background isolates for intensive operations (e.g., image processing)</li>
                         </ul>
                     </div>
@@ -372,11 +373,21 @@
                     <div class="col-lg-6">
                         <p>For a hands-on experience, you can download the demo APK or test the web version.</p>
                         <div class="d-flex flex-wrap gap-3 mt-4">
-                            <a href="#" class="btn btn-custom">
-                                <i class="bi bi-download me-2"></i>Download APK
+                            <!-- Play Store Button -->
+                            <a href="https://play.google.com/store/apps/details?id=your.package.name" target="_blank"
+                                class="btn btn-custom" style="background: #3BCCFF; border-color: #3BCCFF;">
+                                <i class="bi bi-google-play me-2"></i> Google Play
                             </a>
+
+                            <!-- App Store Button -->
+                            <a href="https://apps.apple.com/app/your-app-id" target="_blank" class="btn btn-custom"
+                                style="background: #007AFF; border-color: #007AFF;">
+                                <i class="bi bi-apple me-2"></i> App Store
+                            </a>
+
+                            <!-- Web Version Button (optional) -->
                             <a href="http://promatrix.com.tr/" class="btn btn-outline-light">
-                                <i class="bi bi-globe me-2"></i>Web Version
+                                <i class="bi bi-globe me-2"></i> Web Version
                             </a>
                         </div>
                     </div>
