@@ -919,6 +919,57 @@
     line-height: 1.5;
 }
 
+/* Ensure consistent project section styling */
+.project-section {
+    margin-bottom: 4rem;
+}
+
+.project-section-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+.project-section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 50%;
+    height: 3px;
+    background: var(--accent-color);
+}
+
+/* Fix phone mockup notch styling */
+.phone-mockup::before {
+    content: '';
+    position: absolute;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40%;
+    height: 20px;
+    background: #1a1a1a;
+    border-radius: 0 0 15px 15px;
+    z-index: 2;
+}
+
+/* Better responsive behavior */
+@media (max-width: 768px) {
+    .screenshot-gallery {
+        grid-template-columns: 1fr;
+    }
+    
+    .screenshot-card-modern {
+        min-width: 100%;
+    }
+    
+    .phone-mockup {
+        max-width: 100%;
+    }
+}
+
 /* Floating indicator for scrollable gallery */
 .scroll-hint {
     text-align: center;
