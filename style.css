@@ -877,18 +877,7 @@
         inset 0 0 20px rgba(0,0,0,0.2);
 }
 
-.phone-mockup::before {
-    content: '';
-    position: absolute;
-    top: 12px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 40%;
-    height: 20px;
-    background: #1a1a1a;
-    border-radius: 0 0 15px 15px;
-    z-index: 2;
-}
+
 
 .screenshot-img-modern {
     width: 100%;
@@ -941,19 +930,7 @@
     background: var(--accent-color);
 }
 
-/* Fix phone mockup notch styling */
-.phone-mockup::before {
-    content: '';
-    position: absolute;
-    top: 12px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 40%;
-    height: 20px;
-    background: #1a1a1a;
-    border-radius: 0 0 15px 15px;
-    z-index: 2;
-}
+
 
 /* Better responsive behavior */
 @media (max-width: 768px) {
