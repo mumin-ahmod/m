@@ -15,6 +15,8 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
+    <!-- for carousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.core.min.css">
 
     <style>
         :root {
@@ -250,7 +252,7 @@
                                 <span class="badge bg-secondary me-2">Node.js</span>
                                 <span class="badge bg-success">Socket.io</span>
                             </div>
-                             <!-- New View Project Button -->
+                            <!-- New View Project Button -->
                             <div class="text-center mt-3">
                                 <span class="btn btn-sm btn-outline-light">
                                     <i class="bi bi-arrow-right-circle me-1"></i> View Project Details
@@ -409,6 +411,65 @@
             </div>
         </div>
     </section>
+
+    <!-- Add this section after one of your existing sections -->
+ <section id="certifications" class="section">
+  <div class="container">
+    <h2 class="section-title fade-in">Professional <span
+        style="background: linear-gradient(45deg, var(--accent-color), var(--primary-color)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Certifications</span>
+    </h2>
+    
+    <div class="glide-container">
+      <div class="glide">
+        <div class="glide__track" data-glide-el="track">
+          <ul class="glide__slides">
+            <!-- Certification 1 -->
+            <li class="glide__slide">
+              <div class="certification-card">
+                <img src="img/cirt/c-mumin.png" alt="AWS Certified" class="certification-image">
+                <div class="certification-overlay">
+                  <h5>C# Fundamentals with</h5>
+                  <p>Microsoft, FreecodeCamp - 2025</p>
+                </div>
+              </div>
+            </li>
+            
+            <!-- Certification 2 -->
+            <li class="glide__slide">
+              <div class="certification-card">
+                <img src="img/cirt/dm-mumin.png" alt="Google Cloud" class="certification-image">
+                <div class="certification-overlay">
+                  <h5>Digital Marketing</h5>
+                  <p>ICT Dept. Govt. of BD - 2021</p>
+                </div>
+              </div>
+            </li>
+            
+            <!-- Certification 3 -->
+            <li class="glide__slide">
+              <div class="certification-card">
+                <img src="img/cirt/c-mumin.png" alt="Microsoft Azure" class="certification-image">
+                <div class="certification-overlay">
+                  <h5>Microsoft Certified Azure Expert</h5>
+                  <p>Solutions Architect - 2021</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="glide__arrows" data-glide-el="controls">
+          <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+            <i class="bi bi-chevron-left"></i>
+          </button>
+          <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+            <i class="bi bi-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
     <!-- Blog Articles Section -->
     <section id="blog" class="section blog">
@@ -787,7 +848,28 @@
         setTimeout(() => {
             document.querySelector('.hero .fade-in').classList.add('active');
         }, 300);
+
+        // Certifications Carousel Functionality
+        // Initialize Glide slider
+        document.addEventListener('DOMContentLoaded', function () {
+            new Glide('.glide', {
+                type: 'carousel',
+                perView: 2, // Show 2 items at a time
+                gap: 30,    // Space between items
+                peek: {
+                    before: 0,
+                    after: 50
+                },
+                breakpoints: {
+                    768: {
+                        perView: 1 // Show 1 item on mobile
+                    }
+                }
+            }).mount();
+        });
     </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/glide.min.js"></script>
     <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
 </body>
 
